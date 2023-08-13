@@ -1,5 +1,5 @@
 from hero import Hero
-import random
+from random import randint, choice
 
 
 class Team:
@@ -36,19 +36,19 @@ class Team:
     
     ''' Battle each team against each other.'''
 
-    living_heroes = list()
-    living_opponents = list()
+    # living_heroes = list()
+    # living_opponents = list()
 
-    for hero in self.heroes:
-        living_heroes.append(hero)
+    # for hero in self.heroes:
+    #     living_heroes.append(hero)
 
-    for hero in other_team.heroes:
-        living_opponents.append(hero)
+    # for hero in other_team.heroes:
+    #     living_opponents.append(hero)
 
     while len(self.survivors()) > 0 or len(other_team.survivors() > 0):
       # 1) Randomly select a living hero from each team (hint: look up what random.choice does)
-      hero = random.choice(self.survivors())
-      other_hero = random.choice(other_team.survivors())
+      hero = choice(self.survivors())
+      other_hero = choice(other_team.survivors())
       # 2) have the heroes fight each other (Hint: Use the fight method in the Hero class.)
       return hero.fight(other_hero)
           
@@ -64,13 +64,13 @@ class Team:
       print("Kills: {}".format(hero.kills))
       print("Death: {} \n".format(hero.deaths))
       
-team = Team("Avengers")
-team2 = Team("XXX")
-hero1 = Hero("Mustang", 500)
-other_heros = Hero("Toyota", 500)
-team.add_hero(hero1)
-team2.add_hero(other_heros)
-team.view_all_heroes()
-team2.view_all_heroes()
-team.attack(team2)
-team2.stats()
+# team = Team("Avengers")
+# team2 = Team("XXX")
+# hero1 = Hero("Mustang", 500)
+# other_heros = Hero("Toyota", 500)
+# team.add_hero(hero1)
+# team2.add_hero(other_heros)
+# team.view_all_heroes()
+# team2.view_all_heroes()
+# team.attack(team2)
+# team2.stats()

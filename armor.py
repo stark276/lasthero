@@ -1,4 +1,4 @@
-import random
+from random import randint, choice
 
 class Armor:
 
@@ -9,10 +9,10 @@ class Armor:
 
 # instance method
  def block(self):
-   random_value = random.randint(0, self.max_block)
+   random_value = random.randint(0, int(self.max_block))
    return random_value
  
-if __name__ == "__main__":
-  armor = Armor("Debugging Shield", 10)
-  print(armor.name)
-  print(armor.block())
+# if __name__ == "__main__":
+#   armor = Armor("Debugging Shield", 10)
+#   print(armor.name)
+#   print(armor.block())

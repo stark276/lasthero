@@ -3,6 +3,7 @@ import io
 import sys
 import math
 import random
+from random import randint, choice
 from hero import Hero
 from team import Team
 from weapon import Weapon
